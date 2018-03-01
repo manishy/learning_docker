@@ -2,7 +2,7 @@ const http = require('http');
 const express = require("express");
 const app = express();
 const cookieParser = require('cookie-parser');
-const PORT = 9000;
+const PORT = process.env.PORT||8000;
 const lib = require("./lib/handlerLib.js");
 
 app.use(express.urlencoded({
