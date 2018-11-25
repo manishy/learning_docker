@@ -60,3 +60,4 @@ typings/
 cypress
 .DS_Store
 package-lock.json
+data/*
