@@ -15,7 +15,7 @@ app.use(cookieParser());
 app.use(lib.setSessionIdAndUser);
 // app.use(lib.insertResUtils);
 // app.use(lib.logSessionIdAndUser);
-// app.use(lib.logRequest);
+app.use(lib.logRequest);
 app.get('/login', lib.handleGetLogin);
 app.get('/guestBook.html', lib.serveGuestBook);
 app.post('/logout',lib.handlePostLogOut);
