@@ -1,3 +1,4 @@
+const fs = require("fs");
 const http = require('http');
 const app = require("./app.js");
 
@@ -8,7 +9,7 @@ const {Client} = require('pg');
 
 const client = new Client(connectionString);
 client.connect();
-app.initialize(client);
+app.initialize(client, fs);
 
 
 let server = http.createServer(app);

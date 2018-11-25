@@ -4,7 +4,9 @@ const lib = require("./lib/handlerLib.js");
 const cookieParser = require('cookie-parser');
 
 
-app.initialize = function(client) {
+
+app.initialize = function(client, fs) {
+  app.fs = fs;
   app.client = client;
 };
 
