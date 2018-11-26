@@ -55,7 +55,7 @@ const initializeComments = function(client){
   "SET search_path to flower_catalog;"
   +"DROP TABLE IF EXISTS comments;"
   +"CREATE TABLE comments"
-  +"(user_name varchar(254) primary key,"
+  +"(user_name varchar(254),"
   +"comment varchar(200) not null );";
 
   client.query(createCommentsQuery, (err, res) => {

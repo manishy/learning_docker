@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
-const lib = require("./lib/handlerLib.js");
+const path = require('path');
+const lib = require(path.resolve("./lib/handlerLib.js"));
 const cookieParser = require('cookie-parser');
 
 
