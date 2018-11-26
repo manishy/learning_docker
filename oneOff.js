@@ -56,7 +56,9 @@ const initializeComments = function(client){
   +"DROP TABLE IF EXISTS comments;"
   +"CREATE TABLE comments"
   +"(user_name varchar(254),"
-  +"comment varchar(200) not null );";
+  +"comment varchar(200) not null ,"
+  +"date varchar(200) not null,"
+  +"time varchar(200) not null);";
 
   client.query(createCommentsQuery, (err, res) => {
     if (err) {
