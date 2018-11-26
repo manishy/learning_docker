@@ -1,3 +1,5 @@
+// Have to handle multiple users log in because users get updated at login time.
+
 const express = require("express");
 const app = express();
 const path = require('path');
@@ -25,6 +27,7 @@ app.get('/guestBook.html',lib.updateComments, lib.serveGuestBook);
 app.post('/logout',lib.handlePostLogOut);
 app.post('/login',lib.updateUsers, lib.handlePostLogin);
 app.post('/addComment', lib.handleComments);
+app.post('/registration', lib.registerUser);
 app.use(express.static('public'));
 
 
