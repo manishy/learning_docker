@@ -65,7 +65,7 @@ const initializeComments = function(client){
       // console.log(res);
       console.log("comments initialized");
     }
-    client.end();
+    // client.end();
   })
 }
 

@@ -8,6 +8,7 @@ const cookieParser = require('cookie-parser');
 app.initialize = function(client, fs) {
   app.fs = fs;
   app.client = client;
+  app.users = [];
 };
 
 app.use(express.urlencoded({
@@ -21,7 +22,7 @@ app.use(lib.logRequest);
 app.get('/login', lib.handleGetLogin);
 app.get('/guestBook.html', lib.serveGuestBook);
 app.post('/logout',lib.handlePostLogOut);
-app.post('/login', lib.handlePostLogin);
+app.post('/login',lib.updateUsers, lib.handlePostLogin);
 app.post('/addComment', lib.handleComments);
 app.use(express.static('public'));
 
