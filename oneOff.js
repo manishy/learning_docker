@@ -24,7 +24,8 @@ const initializeUsers = function(client){
     +"DROP TABLE IF EXISTS users;"
     +"CREATE TABLE users"
     +"(user_name varchar(254) primary key,"
-    +"password varchar(40) not null );"
+    +"password varchar(40) not null,"
+    +"session varchar(20));"
   /* Inserting data into users table */
 
      +"insert into users values('Rahul','rahul123'),"
