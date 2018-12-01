@@ -1,5 +1,3 @@
-// Have to handle multiple users log in because users get updated at login time.
-
 const express = require("express");
 const app = express();
 const path = require('path');
@@ -11,7 +9,7 @@ const cookieParser = require('cookie-parser');
 app.initialize = function(client, fs) {
   app.fs = fs;
   app.client = client;
-  app.users = [];
+  app.comments = [];
 };
 
 app.use(express.urlencoded({
