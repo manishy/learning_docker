@@ -3,7 +3,7 @@ const getElement = function(selector) {
 };
 
 const goToLogin = function() {
-  location.href = '/login';
+  location.href = '/login.html';
 };
 
 const sendAjaxRequest = function(method,url,callBack,reqBody,asyn=true){
@@ -56,7 +56,7 @@ const addAndShowAllComments = function(){
 const setUserAndComments = function(){
   return sendAjaxRequest('GET','/getCurrentUserAndComments',function(){
     let response = JSON.parse(this.responseText);
-    let currentUser = response["userName"];
+    let currentUser = response["currentUserName"];
     let comments = response["comments"];
     renderComments(comments);
     getElement('#WelcomeNote').innerHTML = `Hello ${currentUser}`

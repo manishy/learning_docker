@@ -1,7 +1,9 @@
-* now user cant comment empty text; ======    done
-* handle get login.html requests
-* handle getCurrentUserAndComments for get req.
+* now user cant comment empty text; ====================>>>>>>>>>>>    done
+* handle get login.html requests    ====================>>>>>>>>>>>    done
+* handle getCurrentUserAndComments for get req. ====================>>>>>>>>>>> Done;
 
-* use verify user for !req.user;
-* Have to handle error thrown by Db for UI;
-* something is happening on empty comments.
+* use verify user for !req.user;                ====================>>>>>>>>>>> pending
+* Have to handle error thrown by Db for UI;     ====================>>>>>>>>>>> pending
+
+* have to use render instead of reading text through readFileSync; ====================>>>>>>>>>>> pending
+* have to add back button on login page.                           ====================>>>>>>>>>>> pending
