@@ -22,9 +22,10 @@ app.use(lib.setSessionIdAndUser);
 app.use(lib.logRequest);
 app.get('/login', lib.handleGetLogin);
 app.get('/guestBook.html',lib.updateComments, lib.serveGuestBook);
+app.get('/getCurrentUserAndComments', lib.getCurrentUserAndComments);
 app.post('/logout',lib.handlePostLogOut);
 app.post('/login',lib.handlePostLogin);
-app.post('/addComment', lib.handleComments);
+app.post('/addComment',lib.verifyReqBody, lib.handleComments);
 app.post('/registration', lib.registerUser);
 app.use(express.static('public'));
 

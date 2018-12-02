@@ -4,9 +4,11 @@
 <head>
   <title>Guest Book</title>
   <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/guestBook.js"></script>
 </head>
 
 <body>
+  <label for="user" id="WelcomeNote">Hello user</label>
   <form id="logOut" action="/logout" method="post">
     <button type="submit" id="logOut">logout</button>
   </form>
@@ -19,17 +21,17 @@
     <div class="comment">
       <div id="commentTxt">
         <h2>Leave a comment</h2>
-        <form id="commentForm" action="addComment" method="post">
+        <!-- <form id="commentForm" method="post"> -->
           Name:
           <textarea id="comment" type="text" name="Comment" required></textarea>
-          <br><button id="submitButton" type="submit"><b>Submit</b></button>
-        </form>
+          <br><button id="submitButton" type="submit"  ><b>Submit</b></button>
+        <!-- </form> -->
       </div>
     </div>
     <br>
     <div id="commentField">
       <p style="font-family:sans-serif">DATETIME_NAME_COMMENTS_LIST</p>
-      <p style="font-family:sans-serif">commentInfos</p>
+      <p style="font-family:sans-serif" id="comments"></p>
     </div>
   </div>
 </body>

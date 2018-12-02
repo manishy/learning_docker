@@ -1,0 +1,7 @@
+* now user cant comment empty text; ======    done
+* handle get login.html requests
+* handle getCurrentUserAndComments for get req.
+
+* use verify user for !req.user;
+* Have to handle error thrown by Db for UI;
+* something is happening on empty comments.
