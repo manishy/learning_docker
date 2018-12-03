@@ -71,8 +71,18 @@ const setClickListener = function(selector,listener) {
   }
 };
 
+const updateComment = function(){
+  return sendAjaxRequest('GET','/getCurrentUserAndComments',function(){
+    let response = JSON.parse(this.responseText);
+    let comments = response["comments"];
+    console.log("Updating comments");
+    renderComments(comments);
+  })
+}
+
 let load = function(){
   setUserAndComments();
+  intervalId = setInterval(updateComment, 5000);
   setClickListener("#submitButton",addAndShowAllComments)
 }
 
