@@ -7,3 +7,6 @@
 
 * have to use render instead of reading text through readFileSync; ====================>>>>>>>>>>> pending
 * have to add back button on login page.                           ====================>>>>>>>>>>> pending
+* have to remove updateComments usage.                             ====================>>>>>>>>>>> pending
+* Handle comments in many pages.                                   ====================>>>>>>>>>>> pending
+* Handle limited comments.                                         ====================>>>>>>>>>>> pending

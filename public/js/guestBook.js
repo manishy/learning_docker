@@ -75,7 +75,6 @@ const updateComment = function(){
   return sendAjaxRequest('GET','/getCurrentUserAndComments',function(){
     let response = JSON.parse(this.responseText);
     let comments = response["comments"];
-    console.log("Updating comments");
     renderComments(comments);
   })
 }

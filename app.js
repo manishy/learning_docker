@@ -21,7 +21,7 @@ app.use(lib.setSessionIdAndUser);
 // app.use(lib.logSessionIdAndUser);
 app.use(lib.logRequest);
 app.get('/login.html', lib.handleGetLogin);
-app.get('/guestBook.html',lib.updateComments, lib.serveGuestBook);
+app.get('/guestBook.html', lib.serveGuestBook);
 app.get('/getCurrentUserAndComments', lib.getCurrentUserAndComments);
 app.post('/logout',lib.handlePostLogOut);
 app.post('/login.html',lib.handlePostLogin);
