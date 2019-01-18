@@ -54,10 +54,7 @@ typings/
 # Yarn Integrity file
 .yarn-integrity
 
-# dotenv environment variables file
-.env
-
 cypress
 .DS_Store
-package-lock.json
 data/*
+.idea/

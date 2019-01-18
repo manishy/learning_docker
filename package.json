@@ -1,5 +1,5 @@
 {
-  "name": "flowercatalog-manish12354",
+  "name": "flowercatalog-manishy",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "sh bin/setUp.sh && npm install nodemon -g && nodemon server.js --ignore data/comments.json"
+    "start": "sh bin/setUp.sh && npm install nodemon -g && nodemon server.js"
   },
   "keywords": [],
   "author": "",

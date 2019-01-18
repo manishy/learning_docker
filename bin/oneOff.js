@@ -34,7 +34,7 @@ const initializeUsersAndComments = function(client) {
 
 
 const initialize = function() {
-  const defaultCs = 'postgres://localhost:5432/manishy';
+  const defaultCs = 'postgres://localhost:5432/postgres';
   const connectionString = process.env.DATABASE_URL || defaultCs;
   const client = new Client(connectionString);
   client.connect();
