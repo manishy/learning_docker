@@ -21,7 +21,7 @@ const initializeUsersAndComments = function(client) {
     "comment varchar(200) not null ," +
     "date varchar(200) not null," +
     "time varchar(200) not null);";
-
+  client.connect();  
   client.query(createQuery, (err, res) => {
     if (err) {
       console.log(err.stack)
@@ -37,7 +37,6 @@ const initialize = function() {
   const defaultCs = 'postgres://localhost:5432/postgres';
   const connectionString = process.env.DATABASE_URL || defaultCs;
   const client = new Client(connectionString);
-  client.connect();
   initializeUsersAndComments(client);
 }
 
