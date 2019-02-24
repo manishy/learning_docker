@@ -17,6 +17,8 @@ services:
       - "8000:8080"
     environment:
       - DATABASE_URL=${PROTOCOL}://${DB_USER}:${PASSWORD}@${HOST}:${PORT}/${DATABASE}
+    deploy:
+      replicas: 3
 volumes: 
   storage:
 networks:
